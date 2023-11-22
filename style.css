@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+   
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: #c8e7e7;
+    box-shadow: 0.0 10px rgba(0,0,0,.4);
+}
+
+.header .logo{
+    color: #222;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.header .navbar a{
+    color: #000;
+    text-decoration: none;
+    margin-left: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.btn{
+    height:50px;
+    width: 140px;
+    border-radius: 8px;
+    background: #121b46;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #121b46;
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 1;
+    position: relative;
+    overflow:hidden;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e8c7e7;
+    height: 100%;
+    width: 00%;
+    z-index: -1;
+    transition: .3%;
+}
+
+.btn:hover:before{
+    width: 100%;
+}
+
+.btn:hover{ 
+    color: #121b46;
+}
+
+
+
+
+section{
+    padding: 10rem 9% 2rem;
+    background: #e8e7e7;
+}
+.home-section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-section .text-content h5{
+    font-size: 20px;
+    color: #25ad61;
+    font-weight: 500;
+}
+
+.home-section .text-content h2{
+    font-size: 75px;
+    color: #3d3f56;
+    font-weight:600;
+}
+
+.home-section .text-content p{
+    max-width: 600px;
+    color: #222;
+    font-weight: 500;
+}
+
+.home-section .text-content .btn{
+    margin-top: 20px;
+}
+
+.home-section .image-section img{
+    width:40vw;
+    border-radius: 5px;
+    animation: Bounce 4s ease forwards infinite;
+}
+
+@keyframes Bounce{
+    0%{
+        transform:translateY(-24px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-24px);
+    }
+}
+
+.home-section .image-section .shadow{
+    background:  rgba(0,0,0,.4);
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,.4);
+    filter: blur(5px);
+    width: 40vw;
+    animation: BounceIn 4s ease forwards infinite;
+}
+
+@keyframes BounceIn{
+    0%{
+        transform:translateY(24px) scale(.5);
+    }
+    50%{
+        transform: translateY(0px) scale(1);
+    }
+    100%{
+        transform: translateY(24px) scale(.5);
+    }
+}
